@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jqm_boiler</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/themes/mealtracker.min.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<!-- HOMEPAGE -->
+	<div data-role="page" id="home">
+		<div data-role="header">
+			<h1>MealTracker</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-transition="slideUp">Meals</a></li>
+					<li><a href="#add" data-transition="slideUp">Add</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="main" class="ui-content">
+			<ul id="meals" data-role="listview"></ul>
+			<br><br>
+			<ul id="calorieDisplay" data-role="listview"></ul>
+		</div>
+		<div data-role="footer" style="text-align:center">
+			<p>MealTracker &copy; 2017</p>
+		</div>
+	</div>
+
+	<!-- ADD PAGE -->
+	<div data-role="page" id="add" data-theme="b">
+		<div data-role="header">
+			<h1>MealTracker</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-transition="slideUp">Meals</a></li>
+					<li><a href="#add" data-transition="slideUp">Add</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="main" class="ui-content">
+			<form id="mealForm">
+				<label for="tagline">Tagline*</label>
+				<input type="text" id="tagline" required>
+				<label for="type">Meal Type*</label>
+				<select id="type" required>
+					<option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
+          <option value="Snack">Snack</option>
+				</select>
+				<label for="date">Date*</label>
+				<input type="date" id="date" required>
+				<label for="calories">Calories*</label>
+				<input type="text" id="calories" required>
+				<label for="description">Description</label>
+				<textarea id="description"></textarea>
+				<input type="submit" value="Save">
+			</form>
+		</div>
+		<div data-role="footer" style="text-align:center">
+			<p>MealTracker &copy; 2017</p>
+		</div>
+	</div>
+
+	<!-- MEAL PAGE -->
+	<div data-role="page" id="meal">
+		<div data-role="header">
+			<a href="#home" class="ui-btn ui-btn-icon-left">Back</a>
+			<h1>MealTracker</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-transition="slideUp">Meals</a></li>
+					<li><a href="#add" data-transition="slideUp">Add</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="main" class="ui-content">
+			<div id="mealDetails"></div>
+		</div>
+		<div data-role="footer" style="text-align:center">
+			<p>MealTracker &copy; 2017</p>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
